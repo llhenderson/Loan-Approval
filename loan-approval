@@ -3,21 +3,21 @@
   {
    "cell_type": "code",
    "execution_count": 1,
-   "id": "db2bc5cd",
+   "id": "3030cb59",
    "metadata": {
     "_cell_guid": "b1076dfc-b9ad-4769-8c92-a6c4dae69d19",
     "_uuid": "8f2839f25d086af736a60e9eeb907d3b93b6e0e5",
     "execution": {
-     "iopub.execute_input": "2025-10-06T15:37:57.312938Z",
-     "iopub.status.busy": "2025-10-06T15:37:57.312523Z",
-     "iopub.status.idle": "2025-10-06T15:37:59.344961Z",
-     "shell.execute_reply": "2025-10-06T15:37:59.343680Z"
+     "iopub.execute_input": "2025-10-06T15:41:58.729724Z",
+     "iopub.status.busy": "2025-10-06T15:41:58.729402Z",
+     "iopub.status.idle": "2025-10-06T15:42:00.544006Z",
+     "shell.execute_reply": "2025-10-06T15:42:00.542848Z"
     },
     "papermill": {
-     "duration": 2.037292,
-     "end_time": "2025-10-06T15:37:59.346481",
+     "duration": 1.819945,
+     "end_time": "2025-10-06T15:42:00.546103",
      "exception": false,
-     "start_time": "2025-10-06T15:37:57.309189",
+     "start_time": "2025-10-06T15:41:58.726158",
      "status": "completed"
     },
     "tags": []
@@ -50,6 +50,78 @@
     "# You can write up to 20GB to the current directory (/kaggle/working/) that gets preserved as output when you create a version using \"Save & Run All\" \n",
     "# You can also write temporary files to /kaggle/temp/, but they won't be saved outside of the current session"
    ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "6e903fe3",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-10-06T15:42:00.551840Z",
+     "iopub.status.busy": "2025-10-06T15:42:00.551037Z",
+     "iopub.status.idle": "2025-10-06T15:42:00.555872Z",
+     "shell.execute_reply": "2025-10-06T15:42:00.554893Z"
+    },
+    "papermill": {
+     "duration": 0.009217,
+     "end_time": "2025-10-06T15:42:00.557383",
+     "exception": false,
+     "start_time": "2025-10-06T15:42:00.548166",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "568c799f",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-10-06T15:42:00.562249Z",
+     "iopub.status.busy": "2025-10-06T15:42:00.561605Z",
+     "iopub.status.idle": "2025-10-06T15:42:00.599733Z",
+     "shell.execute_reply": "2025-10-06T15:42:00.598764Z"
+    },
+    "papermill": {
+     "duration": 0.042243,
+     "end_time": "2025-10-06T15:42:00.601420",
+     "exception": false,
+     "start_time": "2025-10-06T15:42:00.559177",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "              name              city  income  credit_score  loan_amount  \\\n",
+      "0     Allison Hill         East Jill  113810           389        39698   \n",
+      "1     Brandon Hall     New Jamesside   44592           729        15446   \n",
+      "2     Rhonda Smith      Lake Roberto   33278           584        11189   \n",
+      "3  Gabrielle Davis  West Melanieview  127196           344        48823   \n",
+      "4     Valerie Gray         Mariastad   66048           496        47174   \n",
+      "\n",
+      "   years_employed  points  loan_approved  \n",
+      "0              27    50.0          False  \n",
+      "1              28    55.0          False  \n",
+      "2              13    45.0          False  \n",
+      "3              29    50.0          False  \n",
+      "4               4    25.0          False  \n"
+     ]
+    }
+   ],
+   "source": [
+    "df = pd.read_csv('/kaggle/input/loan-approval-dataset/loan_approval.csv')\n",
+    "print(df.head())"
+   ]
   }
  ],
  "metadata": {
@@ -62,6 +134,7 @@
      "sourceType": "datasetVersion"
     }
    ],
+   "dockerImageVersionId": 31089,
    "isGpuEnabled": false,
    "isInternetEnabled": true,
    "language": "python",
@@ -86,14 +159,14 @@
   },
   "papermill": {
    "default_parameters": {},
-   "duration": 8.220781,
-   "end_time": "2025-10-06T15:37:59.868405",
+   "duration": 7.70848,
+   "end_time": "2025-10-06T15:42:01.122166",
    "environment_variables": {},
    "exception": null,
    "input_path": "__notebook__.ipynb",
    "output_path": "__notebook__.ipynb",
    "parameters": {},
-   "start_time": "2025-10-06T15:37:51.647624",
+   "start_time": "2025-10-06T15:41:53.413686",
    "version": "2.6.0"
   }
  },
